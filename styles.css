@@ -1,0 +1,74 @@
+/* Reset margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the outer container to use Flexbox for centering */
+.container {
+  display: flex;
+  flex-direction: column;  /* Arrange items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center;     /* Center content horizontally */
+  height: 100vh;           /* Full height of the viewport */
+}
+
+/* Style for the main outer box */
+.box {
+  width: 400px;                /* Set a fixed width */
+  height: 550px;               /* Set a fixed height */
+  background-color: #d9ebdd9a; /* Background color for the box */
+  display: flex;
+  flex-direction: column;      /* Arrange the inner boxes vertically */
+  justify-content: space-around; /* Space between the inner boxes */
+  align-items: center;         /* Center the inner boxes horizontally */
+  border-radius: 8px;          /* Optional: add rounded corners */
+  padding: 20px;               /* Add padding inside the outer box */
+  margin-bottom: 20px;         /* Add spacing between the box and the button */
+}
+
+/* Common style for all inner boxes */
+.inner-box {
+  width: 90%;                  /* Adjust width relative to outer box */
+  height: 120px;               /* Set a fixed height for uniformity */
+  background-color: #3498db;   /* Background color for the inner boxes */
+  display: flex;
+  justify-content: center;     /* Center text horizontally */
+  align-items: center;         /* Center text vertically */
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;          /* Rounded corners for inner boxes */
+  transition: transform 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for inner boxes with size increase */
+.inner-box:hover {
+  transform: scale(1.25);      /* Increase the size of the inner box on hover */
+}
+
+/* Style for the "Add to Cart" button */
+.add-cart {
+  width: 400px;                /* Set a fixed width */
+  height: 70px;                /* Set a fixed height */
+  background-color: #d9ebdd9a; /* Background color for the box */
+  display: flex;
+  justify-content: center;     /* Center the text horizontally */
+  align-items: center;         /* Center the text vertically */
+  border-radius: 8px;          /* Add rounded corners */
+  cursor: pointer;             /* Change cursor to pointer on hover */
+  font-size: 18px;             /* Increase font size */
+  font-weight: bold;           /* Make text bold */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for "Add to Cart" button with size increase */
+.add-cart:hover {
+  background-color: #b2e1b3;   /* Change background color on hover */
+  transform: scale(1.1);       /* Increase the size of the button on hover */
+}
+
+/* Optional: active state when the button is clicked */
+.add-cart:active {
+  transform: scale(0.95);      /* Slightly reduce the size when the button is clicked */
+}
